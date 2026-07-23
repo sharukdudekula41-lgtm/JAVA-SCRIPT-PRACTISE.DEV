@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA SCRIPT ASSIGNMENT 1</title>
+</head>
+<body>
+    <script>
+        // ===============================
+// JavaScript Programs (1 - 15)
+// ===============================
+
+// 1. Reverse a String (Without Using Static Methods)
+function reverseString(str) {
+    let rev = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        rev += str[i];
+    }
+    return rev;
+}
+console.log("1.", reverseString("hello")); // olleh
+
+
+// 2. Check Palindrome
+function isPalindrome(str) {
+    let cleaned = "";
+    for (let ch of str.toLowerCase()) {
+        if ((ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9')) {
+            cleaned += ch;
+        }
+    }
+
+    let reversed = "";
+    for (let i = cleaned.length - 1; i >= 0; i--) {
+        reversed += cleaned[i];
+    }
+
+    return cleaned === reversed;
+}
+console.log("2.", isPalindrome("A man a plan a canal Panama")); // true
+
+
+// 3. Check Anagrams
+function isAnagram(str1, str2) {
+    let a = str1.toLowerCase().replace(/\s/g, "");
+    let b = str2.toLowerCase().replace(/\s/g, "");
+
+    if (a.length !== b.length) return false;
+
+    let arr1 = a.split("").sort().join("");
+    let arr2 = b.split("").sort().join("");
+
+    return arr1 === arr2;
+}
+console.log("3.", isAnagram("listen", "silent")); // true
+
+
+// 4. Convert Sentence to Title Case
+function titleCase(sentence) {
+    let words = sentence.toLowerCase().split(" ");
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+    }
+    return words.join(" ");
+}
+console.log("4.", titleCase("the quick brown fox"));
+
+
+// 5. Find Longest Word
+function longestWord(sentence) {
+    let words = sentence.split(" ");
+    let longest = "";
+    for (let word of words) {
+        if (word.length > longest.length) {
+            longest = word;
+        }
+    }
+    return longest;
+}
+console.log("5.", longestWord("JavaScript is a wonderful programming language"));
+
+
+// 6. String Compression
+function compressString(str) {
+    let compressed = "";
+    let count = 1;
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i + 1]) {
+            count++;
+        } else {
+            compressed += str[i] + count;
+            count = 1;
+        }
+    }
+
+    return compressed.length < str.length ? compressed : str;
+}
+console.log("6.", compressString("aabcccccaaa"));
+
+
+// 7. Check String Rotation
+function isRotation(str1, str2) {
+    if (str1.length !== str2.length) return false;
+    return (str1 + str1).includes(str2);
+}
+console.log("7.", isRotation("waterbottle", "erbottlewat"));
+
+
+// 8. Remove Duplicate Characters
+function removeDuplicateChars(str) {
+    let result = "";
+    for (let ch of str) {
+        if (!result.includes(ch)) {
+            result += ch;
+        }
+    }
+    return result;
+}
+console.log("8.", removeDuplicateChars("hello"));
+
+
+// 9. Sum of Array Elements
+function arraySum(arr) {
+    let sum = 0;
+    for (let num of arr) {
+        sum += num;
+    }
+    return sum;
+}
+console.log("9.", arraySum([10, 20, 30, 40]));
+
+
+// 10. Largest Number in Array
+function largestNumber(arr) {
+    let max = arr[0];
+    for (let num of arr) {
+        if (num > max) {
+            max = num;
+        }
+    }
+    return max;
+}
+console.log("10.", largestNumber([15, 50, 9, 100, 23]));
+
+
+// 11. Remove Duplicate Values from Array
+function removeDuplicates(arr) {
+    let result = [];
+    for (let num of arr) {
+        if (!result.includes(num)) {
+            result.push(num);
+        }
+    }
+    return result;
+}
+console.log("11.", removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
+
+
+// 12. Reverse Array Without reverse()
+function reverseArray(arr) {
+    let result = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        result.push(arr[i]);
+    }
+    return result;
+}
+console.log("12.", reverseArray([1, 2, 3, 4, 5]));
+
+
+// 13. Count Occurrences of an Element
+function countOccurrences(arr, element) {
+    let count = 0;
+    for (let num of arr) {
+        if (num === element) {
+            count++;
+        }
+    }
+    return count;
+}
+console.log("13.", countOccurrences([1, 2, 3, 2, 2, 4, 2], 2));
+
+
+// 14. Separate Even and Odd Numbers
+function separateEvenOdd(arr) {
+    let even = [];
+    let odd = [];
+
+    for (let num of arr) {
+        if (num % 2 === 0) {
+            even.push(num);
+        } else {
+            odd.push(num);
+        }
+    }
+
+    return { even, odd };
+}
+console.log("14.", separateEvenOdd([1, 2, 3, 4, 5, 6, 7, 8]));
+
+
+// 15. Rotate Array Right by K Positions
+function rotateRight(arr, k) {
+    let n = arr.length;
+    k = k % n;
+
+    let result = [];
+
+    for (let i = 0; i < n; i++) {
+        result[(i + k) % n] = arr[i];
+    }
+
+    return result;
+}
+console.log("15.", rotateRight([1, 2, 3, 4, 5], 2));
+    </script>
+    
+</body>
+</html>
