@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA SCRIPT ASSIGNMENT2</title>
+</head>
+<body>
+    <script>
+        // ===============================================
+// JavaScript Programs (1 - 9)
+// ===============================================
+
+// 1. Check Palindrome
+function isPalindrome(str) {
+    let cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+    let reversed = "";
+
+    for (let i = cleaned.length - 1; i >= 0; i--) {
+        reversed += cleaned[i];
+    }
+
+    return cleaned === reversed;
+}
+
+console.log("1. Palindrome:", isPalindrome("madam"));
+console.log("1. Palindrome:", isPalindrome("hello"));
+
+
+// 2. Reverse a String
+function reverseString(str) {
+    let reversed = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+
+    return reversed;
+}
+
+console.log("2. Reverse:", reverseString("JavaScript"));
+
+
+// 3. Remove Leading and Trailing Whitespace
+function trimWhitespace(str) {
+    return str.trim();
+}
+
+console.log("3. Trim:", `"${trimWhitespace("   Hello World   ")}"`);
+
+
+// 4. Sort an Array of Strings Alphabetically
+function sortStrings(arr) {
+    return arr.sort();
+}
+
+console.log("4. Sorted:", sortStrings(["Banana", "Apple", "Orange", "Mango"]));
+
+
+// 5. Insert Second Array into the Middle of First Array
+function tuckIn(arr1, arr2) {
+    return [arr1[0], ...arr2, arr1[1]];
+}
+
+console.log("5. Example 1:", tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]));
+console.log("5. Example 2:", tuckIn([15, 150], [45, 75, 35]));
+
+
+// 6. Multiplication Table
+function multiplicationTable(num) {
+    console.log(`6. Multiplication Table of ${num}`);
+
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${num} x ${i} = ${num * i}`);
+    }
+}
+
+multiplicationTable(5);
+
+
+// 7. Print Prime Numbers up to N
+function printPrimes(n) {
+    console.log(`7. Prime Numbers up to ${n}`);
+
+    for (let i = 2; i <= n; i++) {
+        let isPrime = true;
+
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) {
+            console.log(i);
+        }
+    }
+}
+
+printPrimes(30);
+
+
+// 8. Factorial Using Loop
+function factorial(num) {
+    let fact = 1;
+
+    for (let i = 1; i <= num; i++) {
+        fact *= i;
+    }
+
+    return fact;
+}
+
+console.log("8. Factorial:", factorial(5));
+
+
+// 9. FizzBuzz (1 to 100)
+function fizzBuzz() {
+    console.log("9. FizzBuzz");
+
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+
+fizzBuzz();
+    </script>
+</body>
+</html>
