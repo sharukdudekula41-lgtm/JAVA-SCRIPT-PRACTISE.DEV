@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Double Click Heart</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .image-box {
+            width: 700px;
+            height: 450px;
+            margin: auto;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .heart {
+            position: absolute;
+            color: red;
+            transform: translate(-50%, -50%) scale(0);
+            animation: pop 0.6s linear;
+            pointer-events: none;
+        }
+
+        .heart ion-icon {
+            font-size: 90px;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.4);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container text-center mt-5">
+
+        <h2 class="d-flex justify-content-center align-items-center gap-2">
+            Double Click on the Image It
+            <ion-icon name="heart" style="color:red;font-size:35px;"></ion-icon>
+        </h2>
+
+        <h5 class="mb-4">
+            You liked it <span id="count">0</span> times
+        </h5>
+
+        <div class="image-box" id="box">
+
+            <img src="https://images.unsplash.com/photo-1541348263662-e068662d82af?w=1200"
+                alt="Car">
+
+        </div>
+
+    </div>
+
+    <!-- Official Ionicons -->
+    <script type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const box = document.getElementById("box");
+        const count = document.getElementById("count");
+
+        let likes = 0;
+
+        box.addEventListener("dblclick", function (e) {
+
+            likes++;
+            count.innerText = likes;
+
+            const heart = document.createElement("div");
+            heart.className = "heart";
+
+            // Official Ionicons Heart Icon
+            heart.innerHTML = `<ion-icon name="heart"></ion-icon>`;
+
+            heart.style.left = e.offsetX + "px";
+            heart.style.top = e.offsetY + "px";
+
+            box.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 600);
+
+        });
+    </script>
+
+</body>
+
+</html>
