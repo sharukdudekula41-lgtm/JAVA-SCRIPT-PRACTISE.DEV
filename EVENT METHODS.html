@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Methods</title>
+</head>
+<body>
+    <button id="myButton">Click Me</button>
+    <a href="https://www.google.com" id="myLink" target="_blank">Visit Google</a>
+
+    <script>
+        //ADD EVENT LISTENER
+        const button = document.getElementById("myButton");
+        button.addEventListener("click", function() {
+            alert("Button clicked!");
+        });
+
+        //REMOVE EVENT LISTENER
+        function handleClick() {
+            alert("Button clicked!");
+        }
+        button.addEventListener("click", handleClick);
+        button.removeEventListener("click", handleClick);
+
+        //EVENT OBJECT
+        button.addEventListener("click", function(event) {
+            console.log("Mouse X: " + event.clientX);
+            console.log("Mouse Y: " + event.clientY);
+        });
+
+        //PREVENT DEFAULT BEHAVIOR
+        const link = document.getElementById("myLink");
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("Link clicked!");
+        });
+    </script>
+</body>
+</html>
