@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM METHODS</title>
+</head>
+<body>
+    <h1 id = "heading">DOM Manipulation Practise </h1>
+    <input
+       type= "text"
+       id="nameInput"
+       Placeholder="Enter your name">
+
+       <br><br>
+       <button id ="submitBtn">Submit</button>
+       <button id ="colorBtn">Change Color</button>
+       <button id ="addBtn">Remove Pragraph</button>
+
+       <div id="Container"></div>
+       <script>
+        // Slecting Elements
+        let heading = document.getElementById("heading");
+        let input = document.getElementById("nameInput");
+        let Container = document.getElementById("Container");
+
+        // Form Validation + Button Click Event
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            let name = input.value;
+            if (name === ""){
+                alert("Please enter your name");
+            } else {
+                heading.innerText = "Welcome, " + name;
+                alert("Welcome, " + name);
+            });
+            //
+            // Change Element
+            document.getElementById("addBtn")
+            .addEventListener("click",function (){
+                 
+                let para = document.createElement("p");
+
+                para.id = "new Para";
+
+                para.innerText = 
+                   "This Pragraph was created using Javascript.";
+                   container.appendChild(para);
+            });
+
+            // Remove Element
+            document.getElemetById("removeBtn")
+            .addEventListner("click",function () {
+
+                let para = 
+                document.getElementById("new Para");
+
+                if (para) {
+                    document.getElementById("new para");
+                } else {
+                    alert("No pragraph to remove");
+                }
+            });       
+            </script>
+    
+        
+    
+</body
+</html>
