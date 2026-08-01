@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 FEATURES</title>
+</head>
+<body>
+    <script>
+        //Template Literals
+      const name = "Sharukh";
+      const age = 22;
+      console.log(`My name is ${name} and I am ${age} years old.`);
+    
+    // Object destructing
+      const colors = ["Red","Green","Blue"]
+      const[First, second] = colors
+      console.log(First);
+      console.log(second);
+
+         // Spread operator
+      const arr1 = [1,2,3,4,5];
+      const arr2 = [...arr1,6,7,8,9,10];
+      console.log(arr2);
+
+      // Rest operator
+        function sum(...numbers) {
+            return numbers.reduce((total, num) => total + num,0);
+        }
+        console.log(sum(1,2,3,4,5));
+      
+      // Promises
+      const promise = new Promise((resolve, reject)=> {
+        let sucess = true;
+
+        if(sucess) {
+            resolve("Data Loaded");
+        } else {
+            reject("Error");
+        }
+      });
+
+      promise
+         .then(result => console.log(result))
+         .catch(error => console.log(error));
+
+         // Async/Await
+
+         async function getData(){
+            return "Hello";
+         }
+         getData().then(console.log);    
+         </script>
+    
+</body>
+</html>
