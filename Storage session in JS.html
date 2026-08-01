@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Session in JS</title>
+</head>
+<body>
+    <script>
+        // Session Storage
+        // setItem(key, value)
+        sessionStorage.setItem("name", "Sharukh");
+        sessionStorage.setItem("age", "22");
+
+        // getItem(key)
+        const name = sessionStorage.getItem("name");
+        const age = sessionStorage.getItem("age");
+        console.log(`Name: ${name}, Age: ${age}`);
+
+        // removeItem(key)
+        sessionStorage.removeItem("age");
+
+        // clear()
+        // sessionStorage.clear();
+
+        // Geo Location
+
+        navigator.getlocation.getCurrentPosition(
+            position => {
+                const lattitude = position.coords.Latitude;
+                const Longitude = position.coords.Longitude;
+            };
+            error => {
+                console.log("Error.message");
+            }
+        );
+        
+        // Web Sockets
+        const socket = new websocket("ws://Localhost:8080");
+        socket.onopen = () => {
+
+      }
+      socket.onmessage = event => {
+        console.log("New Message: ", event.data);
+        console.log("New Message: ", event.data);
+        };
+        function sendMessage(message) {
+            socket.sendmessage(message);
+        }
+
+    </script>
+    
+</body>
+</html>
