@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" id="Username">
+   <button onclick="validation()">Validate</button>
+   <script>
+    function validation() {
+        let username = document.getElementById("Username").value;
+        if(username==="") {
+            alert("Username Required");
+        }else{
+            alert("Username is valid");
+        }
+        }
+    
+   </script>
+</body>
+</html>
