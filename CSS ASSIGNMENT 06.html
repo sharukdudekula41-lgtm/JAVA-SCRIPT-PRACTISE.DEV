@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ASSIGNMENT 06</title>
+</head>
+<title style="color: rgb(207, 13, 72);">CSS ASSIGNMENT</title>
+<style>
+    /* GENERAL */
+    body {
+        font-family : Arial;
+        margin:0;
+        height: 2000px;
+    }
+    /*===================*/
+    /* 1.Navigation menu */
+    /*==================*/
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+    }
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .navbar a:hover {
+        background: #555;
+    }
+    /*===================*/
+    /*2.CHECK BOX & RADIO */
+    /*==================*/
+    .custom-input input {
+        accent-color: green;
+        width: 20px;
+        height: 20px;
+    }
+    /*===================*/
+    /*3.BOUNCING BALL ANIMATION*/
+    .container-1{
+        width: 500px;
+        height: 250px;
+        position: relative;
+    }
+    
+    
+    
+    .ball {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(207, 13, 72);
+        border-radius: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        bottom : 0;
+        left: 50%;
+        animation: bounce 1s infinite alternate;
+    }
+    @keyframes bounce{
+        from{
+            top: 0;
+        }
+        to{
+            top: 100px;
+        }
+    }
+       
+    /*===================*/
+    /*4.IMMAGE GALLERY*/
+    /*==================*/
+    .gallery img {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+        transform: scale(1.5);
+        filter: grayscale()
+    }
+    /*===================*/
+    /* PROGRESS BAR */
+    /*==================*/
+    .progress {
+        width:500px;
+        height: 30px;
+        background-color:#ddd
+        ;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .progress-bar {
+        width: 75%;
+        height: 100%;
+        background-color: #11dda0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       color: aliceblue;
+        
+       
+    }
+    
+   
+</head>
+</style>
+<body>
+    <header class="header">
+    <h2> CSS ASSIGNMENT <h2></h2>
+    </header>
+    <section>
+        <!-- 1.Navigation menu -->
+        <p> 1:Navigation Menu:</p>
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <div class="dropdown">
+                <a href="#services" class="dropbtn">Services</a>
+                <div class="dropdown-content">
+                    <a href="#web">Web Design</a>
+                    <a href="#graphic">Graphic Design</a>
+                    <a href="#seo">SEO</a>
+                </div>
+            </div>
+            <a href="#contact">Contact</a>
+        </div>
+        <hr>
+        <!-- 2.CHECK BOX & RADIO -->
+        <p> 2:Check Box & Radio Buttons:</p>
+        <div class="custom-input">
+            <label><input type="checkbox" checked> Option 1</label><br>
+            <label><input type="checkbox"> Option 2</label><br>
+            <label><input type="checkbox"> Option 3</label><br><br>
+
+            <label><input type="radio" name="choice" checked> Choice A</label><br>
+            <label><input type="radio" name="choice"> Choice B</label><br>
+            <label><input type="radio" name="choice"> Choice C</label><br>
+        </div>
+        <hr>
+        <!-- 3.BOUNCING BALL ANIMATION -->
+        <p> 3:Bouncing Ball Animation:</p>
+        <div class="container-1">
+        <div class="ball"></div>
+        </div>
+        <hr>
+
+        <!-- 4.IMMAGE GALLERY -->
+        <p> 4:Image Gallery:</p>
+        <div class="gallery">
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlG1-UpFQtqNZ7VrqVMaekVag_lG5YB4OL9g&s" alt="1.image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAh4_aNOgs1HMiL64H-LHKHwPo3ZVoRLKgMw&s," alt="2.image">
+        <hr>
+
+        <!-- 5.PROGRESS BAR -->
+        <p> 5:Progress Bar:</p>
+        <section></section>
+        <div class="progress">
+            <div class="progress-bar">70%</div>
+            </section>
+        </div>
+</body>
+</html>
