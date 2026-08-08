@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            height: 97vh;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(238, 30, 127);
+            /*
+            transition-property:width , ;
+            transition-duration: 1s;
+            transition-timing-function:ease-in-out;
+            transition-delay: 1s; */
+            transition: all 2s linear 2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease-in-out;
+        }
+        div:hover{
+            width: 300px;
+            background-color:orange;
+        }
+    </style>
+</head>
+<body >
+    <div>
+    <h1>Box</h1>
+</div>
+</body>
+</html>
