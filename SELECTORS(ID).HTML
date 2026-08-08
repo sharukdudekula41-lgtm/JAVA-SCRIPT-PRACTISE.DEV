@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="btn">ID SELECTORS</title>
+
+    <a href="http://www.youtube.com/">WEB DEVELLOPMENT</a>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>ID SELECTORS</h1>
+    <style>
+      #myId {
+        color: blue;
+      }
+
+      h1 {
+        color: red;
+      }
+      h1:hover {
+        color: green;
+      }
+
+      #btn {
+        background-color: rgb(84, 223, 20);
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #titlle {
+        color: orangered;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 100px;
+      }
+      * {
+        margin: 5px;
+        padding: 10px;
+      }
+      button:focus {
+        background-color: red;
+        border: 2opx solid;
+        margin: 10px;
+      }
+      ::selection {
+        background-color: yellow;
+        color: black;
+      }
+      P::first-line {
+        color: purple;
+      }
+      p:first-child{
+        color: purple;
+      }
+    </style>
+    <head>
+      <body style="text-align: center"></body>
+      <h2>ID SELECTORS</h2>
+      <h1 id="title">WELCOME</h1>
+      <button id="btn">CLICK ME</button>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+        eligendi amet esse ipsam architecto molestias ut explicabo, quos
+        expedita, illo tempore pariatur quod id aspernatur sit aut perspiciatis
+        nulla. Possimus?
+      </p>
+    </head>
+  </body>
+</html>
