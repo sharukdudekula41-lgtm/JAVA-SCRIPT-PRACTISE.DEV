@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ASSIGNMENT</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            height: 2000px;<header style="text-align: center;","> STICKY HEADER</header>
+    <hr>
+    <div class="box"></div>
+    <hr>
+    <div class="Menu">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+    </div>
+    <hr>
+    <div class="Search">
+    <input type="text" class="search" placeholder="Search...">
+    </div>
+    <hr>
+    <div  class="Tooltip">
+        Hover over me
+        <span class="Tooltiptext">Tooltip text</span>
+    </div>
+
+        }
+        /*1.Sticky Header*/
+        .header {
+            text-align: center;
+            background-color: rgba(12, 106, 201, 0.466);
+            position: sticky;
+            width: 100%;
+            top: 0px;
+            padding: 15px;
+        }
+        /*2. Rotating Box */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(228, 67, 88);
+            margin: 50px auto;
+            transition: 0.5s;
+        }
+        .box:hover {
+            transform: rotate(180deg);
+        }
+        /*3. Hamburger Menu*/
+        .Menu {
+            width: 40px;
+            margin: 6px auto;
+            cursor: pointer;
+        }
+        .bar {
+            height: 5px;
+            background-color: rgb(27, 10, 1);
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        .Menu:hover .bar1 {
+            transform: rotate(-45deg) translate(-8px,6px);
+        }
+        .Menu:hover .bar2 {
+            opacity: 0;
+        }
+        .Menu:hover .bar3 {
+            transform: rotate(45deg) translate(-8px,-6px);
+        }
+        /* 4. Search */
+        .Search {
+            display: block;
+            margin: 50px auto;
+            padding: 10px;
+            width: 150px;
+            transition: 0.4s;
+         }
+         .Search:focus {
+             width: 300px;
+         }
+         /*5.Tooltip */
+         .Tooltip {
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            display: inline-block;
+            margin: 40%;
+            margin-top: 100px;
+         }
+         .Tooltip .Tooltiptext {
+            text-align: center;
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+         }
+         .Tooltip:hover .Tooltiptext {
+            visibility: visible;
+         }
+         /* Arrow */
+            .Tooltip .Tooltiptext::after {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: 0px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: black transparent transparent transparent;
+            }
+            /* Show */
+            .Tooltip:hover .Tooltiptext {
+                visibility: visible;
+                justify-content: center;
+                align-items: center;
+            
+            }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h2>1. My Sticky Header</h2>
+    </header>
+
+    <div class="content">
+        <p>This is the content area.</p>
+        <p>Scroll down to see the sticky header in action.</p>
+    </div>
+    <hr>
+    <h2>2. ROTATE BOX </h2>
+    <div class="box"></div>
+    <hr>
+    <h2>3. HAMBURGER MENU</h2>
+    <br>
+    <div class="Menu">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+    </div>
+    <hr>
+    <h3>4. SEARCH BOX</h3>
+    <br>
+    <input type="text" class="Search" placeholder="Search...">
+    <hr>
+    <h4>5. TOOL TIP </h4>
+    <div class="Tooltip">Hover over me
+        <span class="Tooltiptext">Tooltip text</span>
+        </div>
+
+</body>
+</html>
