@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >CSS ASSIGNMENT 1</title>
+</head>
+<h1 style="color: rgb(19, 107, 179); text-align: center;">CSS ASSIGNMENT 1</h1>
+<body>
+    <ol>
+        <li style="color: rgb(231, 11, 47);">What is global selector ? and explain with example</li>
+        <ul>
+    <br>
+        <li>The global selectors (*) selects all elements in web page</li>
+        <li>it used to apply common styles like margin,padding,or font styles</li>
+        <li>Example: * { margin: 0; padding: 0; }</li>
+     </ul>
+     <hr>
+     <li style="color: rgb(194, 97, 6);">What is a tag/element selector? Explain with  five example</li>
+     <ul>
+        <li>it selects HTML elements based on their tag name.it applies the same style to all elements of that type of tags</li>
+        <li>Example: h1 { color: blue; }</li>
+        <li>Example: p { font-size: 16px; }</li>
+        <li>Example: div { background-color: lightgray; }</li>
+        <li>Example: span { font-weight: bold; }</li>
+        <li>Example: img { border: 1px solid #ccc; } </li>
+     </ul>
+     <hr>
+     <li style="color: rgb(38, 112, 4);">What is a class selector? Explain with examples</li>
+   <ul>
+    <li>A Class selector is used to style elemnts with a specific class.
+        it is written using dot(.)
+    </li>
+    <li>Example: .my-class { color: red; }</li>
+    <li>Example: .container { width: 100%; }</li>
+   </ul>
+   <hr>
+   <li style="color: rgb(19, 107, 179);">What is an ID selector? Explain with examples</li>
+   <ul>
+    <li>An ID selector is used to style a single, unique element on a page.
+        it is written using a hash symbol (#)
+    </li>
+    <li>Example: #my-id { color: blue; }</li>
+    <li>Example: #header { background-color: #f0f0f0; }</li>
+   </ul>
+   <hr>
+   <li style="color: rgba(236, 80, 8, 0.979)"> What  is powerful selctors in CSS?</li>
+   <ul>
+    <li>Powerful selectors in CSS are those that allow you to target elements based on specific criteria, such as their attributes, position in the document, or relationship to other elements.</li>
+    <li>Examples of powerful selectors include:</li>
+    <li>Attribute Selector: input[type="text"] { border: 1px solid #ccc; }</li>
+    <li>Child Selector: div > p { color: green; }</li>
+    <li>Adjacent Sibling Selector: h2 + p { font-size: 18px; }</li>
+    <li>General Sibling Selector: h2 ~ p { color: gray; }</li>
+   </ul>
+   <hr>
+   <li style="color: rgb(255, 0, 55);">Explain the different types of combinators in CSS?</li>
+   <ul>
+    <li>Combinators in CSS are used to combine multiple selectors to target elements based on their relationship in the document structure.</li>
+    <li>Types of combinators include:</li>
+    <li>Descendant Combinator (space): div p { color: blue; }</li>
+    <li>Child Combinator (> ): div > p { color: red; }</li>
+    <li>Adjacent Sibling Combinator (+): h2 + p { font-size: 18px; }</li>
+    <li>General Sibling Combinator (~): h2 ~ p { color: gray; }</li>
+   </ul>
+   <hr>
+   <li style="color: blueviolet;" > Give an example of when you would use each combinator?</li>
+<ul>
+    <li>Descendant Combinator: To style all paragraphs inside a div: div p { color: blue; }</li>
+    <li>Child Combinator: To style only direct child paragraphs of a div: div > p { color: red; }</li>
+    <li>Adjacent Sibling Combinator: To style the first paragraph immediately following an h2: h2 + p { font-size: 18px; }</li>
+    <li>General Sibling Combinator: To style all paragraphs that are siblings of an h2: h2 ~ p { color: gray; }</li>
+</ul>
+<hr>
+<li style="color: blue;" > Explain the difference between id, class and element selectors?</li>   
+<ul>
+    <li>Element Selector: Targets all elements of a specific type (e.g., h1 { color: blue; })</li>
+    <li>Class Selector: Targets elements with a specific class (e.g., .my-class { color: red; })</li>
+    <li>ID Selector: Targets a single, unique element with a specific ID (e.g., #my-id { color: blue; })</li>
+</ul>
+<hr>
+<li style ="color: rgb(241, 14, 139);"> What is the *Selector used for?</li>
+<ul>
+    <li>The * selector, also known as the universal selector, is used to select all elements in a document. It applies the specified styles to every element on the page.</li>
+    <li>Example: * { margin: 0; padding: 0; } - This example resets the margin and padding for all elements to zero.</li>
+</ul>
+<hr>
+<li style="color: rgb(226, 98, 13);"> How would you override a style applied by an ID selector with a class selector?</li>
+<ul>
+    <li>To override a style applied by an ID selector with a class selector, you can increase the specificity of the class selector or use the !important declaration.</li>
+    <li>Example using increased specificity: #my-id { color: blue; } .my-class { color: red; } - In this case, the ID selector has higher specificity, so the color will be blue. To override it, you can make the class selector more specific: #my-id.my-class { color: red; }</li>
+    <li>Example using !important: #my-id { color: blue; } .my-class { color: red !important; } - In this case, the !important declaration will override the ID selector, and the color will be red.</li>
+</ul>
+<hr>
+<li style="color: rgb(27, 231, 9);"> How do sibling selectors work in css? can you give an example?</li>
+<ul>
+    <li>Sibling selectors in CSS allow you to target elements that are siblings of each other in the document structure.</li>
+    <li>Example: h2 + p { font-size: 18px; } - This styles the first paragraph that immediately follows an h2 element.</li>
+</ul>
+<hr>
+<li style="color: rgba(139, 61, 25, 0.979);"> How would you target  an element with multiple classes? </li>
+<ul>
+    <li>To target an element with multiple classes, you can combine the class selectors in your CSS rule. For example, if you have an element with the classes "class1" and "class2", you can target it like this: .class1.class2 { color: red; }</li>
+    <li>This will apply the specified styles to any element that has both "class1" and "class2" classes.</li>
+</ul>
+<hr>
+<li style="color: rgb(17, 17, 99);"> How do you select all list-items inside an ul element?</li>
+<ul>
+    <li>To select all list items inside a ul element, you can use the descendant selector in CSS. The syntax would be: ul li { /* styles here */ }</li>
+    <li>This will apply the specified styles to all li elements that are descendants of a ul element.</li>
+</ul>
+
+</ol>
+</body>
+</html>
