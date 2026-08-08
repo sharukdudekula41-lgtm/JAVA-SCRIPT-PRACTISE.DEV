@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSITIONS IN CSS</title>
+</head>
+<style>
+    body{
+        height:2000px; /* for scrolling(sticky and fixed)*/
+    }
+    /*common styles for all the divs*/
+    .hello {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: rgb(37, 145, 180);
+        border: 2px solid rgb(28, 160, 153);
+        text-align: center;
+        line-height: 100px;
+        font-weight: bold;
+    }
+    /* STATIC */
+    #STATIC {
+        position: static;
+        background-color: seagreen;
+    }
+    /* RELATIVE */
+    #RELATIVE {
+        z-index:5;
+        position: relative;
+        left:20px;
+        top: 10px;
+        right:100px;
+        background-color: rgb(212, 13, 122);
+    }
+    /* ABSOLUTE */
+    #ABSOLUTE {
+        z-index: 10;
+        position: absolute;
+        top:100px;
+        left:100px;
+        bottom:0px;
+        background-color: rgb(13, 205, 212);
+    }
+    /* FIXED */
+    #FIXED {
+        z-index:100;
+        position: fixed;
+        top:-10px;
+        left:-10px;
+        bottom:100px;
+        background-color: rgb(212, 13, 13);
+    }
+
+</style>
+<h1 style="color: rgb(28, 160, 153);">POSITIONS IN CSS</h1>
+<body>
+    <div class="hello" id="STATIC">STATIC</div>
+    <div class="hello" id="RELATIVE">RELATIVE</div>
+    <div class="hello" id="ABSOLUTE">ABSOLUTE</div>
+    <div class="hello" id="FIXED">FIXED</div>
+    <div class="hello" id="STICKY">STICKY</div>
+</body>
+</html>
